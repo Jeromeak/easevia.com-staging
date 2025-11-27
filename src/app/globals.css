@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Mada:wght@200..900&display=swap');
+@font-face {
+  font-family: 'Futura PT Book';
+  src:
+    url('/assets/fonts/FuturaPT-Book.woff2') format('woff2'),
+    url('/assets/fonts/FuturaPT-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neutraface Condensed Medium Fin';
+  src:
+    url('/assets/fonts/NeutrafaceCondensedMediumFin-.woff2') format('woff2'),
+    url('/assets/fonts/NeutrafaceCondensedMediumFin-.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura PT';
+  src:
+    url('/assets/fonts/FuturaPT-Medium.woff2') format('woff2'),
+    url('/assets/fonts/FuturaPT-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import 'tailwindcss';
+@config "../../tailwind.config.js";
+
+:root {
+  --bodyFont: 'Futura PT Book';
+}
+
+body {
+  font-family: var(--bodyFont);
+  font-weight: 400;
+}
+
+.scroll::-webkit-scrollbar {
+  width: 5px;
+}
+
+.scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background: #888;
+}
+@keyframes flyBird {
+  0% {
+    transform: translateX(-100%) translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(25%) translateY(-10px) rotate(-15deg);
+  }
+  50% {
+    transform: translateX(50%) translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateX(75%) translateY(-10px) rotate(15deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(0) rotate(0deg);
+  }
+}
+.animate-fly {
+  animation: flyBird 10s ease-in-out infinite alternate;
+}
+
+.animate-fly-bird-2 {
+  animation: flyBird 12s ease-in-out infinite alternate;
+}
+
+.animate-fly-bird-3 {
+  animation: flyBird 14s ease-in-out infinite alternate;
+}
+.animate-fly-bird-4 {
+  animation: flyBird 16s ease-in-out infinite alternate;
+}
+.animate-fly-bird-5 {
+  animation: flyBird 18s ease-in-out infinite alternate;
+}
+.animate-fly-bird-6 {
+  animation: flyBird 20s ease-in-out infinite alternate;
+}
+.css-1dimb5e-singleValue {
+  color: #fff !important;
+}
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+@keyframes skeleton {
+  0% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.skeleton {
+  @apply bg-blue-150 dark:bg-[#ffffff4d];
+  animation: skeleton 1s ease-in-out infinite alternate;
+}
+.orange {
+  @apply hover:text-orange-200 hover:bg-transparent border hover:border-orange-200 transition duration-500;
+}
+.orangeTransparent {
+  @apply hover:text-black hover:bg-orange-200 border hover:border-orange-200 transition duration-500;
+}
+.Teal {
+  @apply hover:text-Teal-500 hover:bg-transparent border border-transparent hover:border-Teal-500 transition duration-500;
+}
+.TealTransparent {
+  @apply hover:text-white hover:bg-Teal-500 transition duration-500;
+}
+
+.bg-details_banner {
+  background-image: url('/assets/images/overview_bg.webp');
+}

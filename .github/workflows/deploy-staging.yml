@@ -1,0 +1,62 @@
+name: Deploy to Linux Server
+
+on:
+  push:
+    branches:
+      - staging # Deploy when code is pushed to the `stage` branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Add the .env file
+      - name: Add .env file
+        run: |
+          echo "${{ secrets.ENV_FILE_STAGING }}" > .env
+
+      # Set up Docker Buildx (if multi-platform builds are needed)
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      # Log in to DockerHub
+      - name: Log in to DockerHub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      # Build the Docker image
+      - name: Build Docker image
+        run: |
+          docker build --platform linux/amd64 -t daivinod/staging.easevia.com:latest .
+
+      # Push the Docker image to DockerHub
+      - name: Push Docker image
+        run: |
+          docker push daivinod/staging.easevia.com:latest
+
+      # Deploy to the Linux server
+      - name: Deploy to Server
+        uses: appleboy/ssh-action@v0.1.6
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          port: ${{ secrets.SERVER_PORT }}
+          script: |
+            # Pull the latest Docker image
+            docker pull daivinod/staging.easevia.com:latest
+
+            # Stop and remove the existing container (if any)
+            docker stop web-easevia || true
+            docker rm web-easevia || true
+
+            # Run the container with the new image
+            docker run --platform linux/amd64 -d -p 3000:3000 --name web-easevia daivinod/staging.easevia.com:latest
+
+            docker image prune -a -f

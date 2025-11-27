@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://easevia.com/sitemap.xml

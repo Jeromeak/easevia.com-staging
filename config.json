@@ -1,0 +1,93 @@
+[
+  {
+    "title": "Book Your Trip | Destinations, Tickets, Offers & More - Easevia.",
+    "description": "Book your next trip easily with Easevia. Explore destinations, manage active tickets, and unlock exclusive offers for seamless travel every time you fly with us.",
+    "slug": "/booking",
+    "keywords": [
+      "easevia",
+      "booking",
+      "travel",
+      "flight tickets",
+      "active tickets",
+      "exclusive offers",
+      "book trip",
+      "destinations",
+      "easy booking",
+      "trip planning"
+    ],
+    "seo": {
+      "h1": "",
+      "h2": "",
+      "h3": ""
+    }
+  },
+  {
+    "title": "Compare Travel Subscription Plans & Exclusive Offers | Easevia",
+    "description": "Discover Easevia’s flexible travel subscription plans designed for every traveler. Compare pricing, explore exclusive benefits, and enjoy seamless booking experiences.",
+    "slug": "/plans",
+    "keywords": [
+      "Easevia",
+      "travel subscription",
+      "travel plans",
+      "subscription plans",
+      "compare travel plans",
+      "plan pricing",
+      "travel features",
+      "best travel plan",
+      "Easevia subscription",
+      "travel membership"
+    ],
+    "seo": {
+      "h1": "",
+      "h2": "",
+      "h3": ""
+    }
+  },
+  {
+    "title": "My Account | Manage Bookings, Profile & Travel History - Easevia",
+    "description": "Access your Easevia account to manage bookings, update your profile, and track your travel history. Enjoy personalized features for faster, smoother travel management.",
+    "slug": "/my-account",
+    "keywords": [
+      "Easevia",
+      "my account",
+      "manage bookings",
+      "travel profile",
+      "user dashboard",
+      "travel history",
+      "booking management",
+      "profile settings",
+      "travel updates",
+      "personalized travel",
+      "Easevia account",
+      "trip management"
+    ],
+    "seo": {
+      "h1": "",
+      "h2": "",
+      "h3": ""
+    }
+  },
+  {
+    "title": "Easevia Terms & Conditions | User Agreement and Privacy Policy",
+    "description": "Review Easevia’s Terms and Conditions to understand your rights, user responsibilities, and data privacy policies. Learn how we ensure secure, transparent travel services.",
+    "slug": "/terms-and-conditions",
+    "keywords": [
+      "Easevia",
+      "terms and conditions",
+      "user agreement",
+      "privacy policy",
+      "travel policy",
+      "data protection",
+      "service terms",
+      "legal guidelines",
+      "user rights",
+      "Easevia policy",
+      "secure travel services"
+    ],
+    "seo": {
+      "h1": "",
+      "h2": "",
+      "h3": ""
+    }
+  }
+]
